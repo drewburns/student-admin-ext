@@ -1,6 +1,6 @@
 {
-  "name": "Page Redder",
-  "description": "Make the current page red",
+  "name": "UConn Student Admin Helper",
+  "description": "Makes student admin much easier to use",
   "version": "2.0",
   "permissions": [
     "activeTab",
@@ -17,7 +17,7 @@
     }
   ],
   "browser_action": {
-    "default_title": "Make this page red"
+    "default_title": "Student Admin"
   },
   "manifest_version": 2
 }
