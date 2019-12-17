@@ -7,7 +7,8 @@ chrome.browserAction.onClicked.addListener(function(tab) {
   // No tabs or host permissions needed!
     chrome.tabs.update({
     // file: 'testing.js'
-    	url: "https://student.studentadmin.uconn.edu/psp/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?1&PORTALPARAM_PTCNAV=UC_SS_STUDENT&EOPP.SCNode=HRMS&EOPP.SCPortal=EMPLOYEE&EOPP.SCName=UC_SELF_SERVICE&EOPP.SCLabel=Self-Service&EOPP.SCPTfname=UC_SELF_SERVICE&FolderPath=PORTAL_ROOT_OBJECT.UC_SELF_SERVICE.UC_SS_STUDENT&IsFolder=false"
+      // url: "https://student.studentadmin.uconn.edu/psp/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?1&PORTALPARAM_PTCNAV=UC_SS_STUDENT&EOPP.SCNode=HRMS&EOPP.SCPortal=EMPLOYEE&EOPP.SCName=UC_SELF_SERVICE&EOPP.SCLabel=Self-Service&EOPP.SCPTfname=UC_SELF_SERVICE&FolderPath=PORTAL_ROOT_OBJECT.UC_SELF_SERVICE.UC_SS_STUDENT&IsFolder=false"
+      url: "https://student.studentadmin.uconn.edu/psp/CSPR/EMPLOYEE/HRMS/h/?tab=DEFAULT"
   	});
   // chrome.tabs.executeScript({
   //   // file: 'testing.js'
