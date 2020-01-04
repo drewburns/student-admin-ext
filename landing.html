@@ -13,9 +13,10 @@
             text-align: center;
             font-size: 35px;
         }
+
         .social {
             height: 30px;
-            padding-left:10px;
+            padding-left: 10px;
             padding-right: 10px;
         }
 
@@ -40,14 +41,119 @@
             display: table;
             clear: both;
         }
+
         #normal-menu {
             text-decoration: none;
         }
+
         #copy-link {
-            color:red;
+            color: red;
         }
+
         .icons {
-            height:50px;
+            height: 50px;
+        }
+
+
+        .con-tooltip {
+
+            position: relative;
+            /* background: #F2D1C9; */
+
+            /* border-radius: 9px; */
+            /* padding: 0 20px; */
+            /* margin: 10px; */
+
+            display: inline-block;
+
+            transition: all 0.3s ease-in-out;
+            cursor: default;
+
+        }
+
+        /*tooltip */
+        .tooltip {
+            visibility: hidden;
+            z-index: 1;
+            opacity: .40;
+
+            width: 230px;
+            margin-top: -10px;
+            padding: 0px 20px;
+
+            background: #333;
+            color: #E086D3;
+
+            position: absolute;
+            /* top: -140%; */
+            /* left: -25%; */
+
+
+            border-radius: 9px;
+            font: 16px;
+
+            transform: translateY(9px);
+            transition: all 0.3s ease-in-out;
+
+            box-shadow: 0 0 3px rgba(56, 54, 54, 0.86);
+        }
+
+
+        /* tooltip  after*/
+        .tooltip::after {
+            content: " ";
+            width: 0;
+            height: 0;
+
+            border-style: solid;
+            border-width: 12px 12.5px 0 12.5px;
+            border-color: #333 transparent transparent transparent;
+
+            position: absolute;
+            left: 40%;
+
+        }
+
+        .con-tooltip:hover .tooltip {
+            visibility: visible;
+            transform: translateY(-10px);
+            opacity: 1;
+            transition: .3s linear;
+            animation: odsoky 1s ease-in-out infinite alternate;
+
+        }
+
+        @keyframes odsoky {
+            0% {
+                transform: translateY(6px);
+            }
+
+            100% {
+                transform: translateY(1px);
+            }
+
+        }
+
+        /*hover ToolTip*/
+
+        .right:hover {
+            transform: translateX(6px);
+        }
+
+
+
+
+        /*right*/
+
+        .right .tooltip {
+            top: -20%;
+            left: 115%;
+        }
+
+        .right .tooltip::after {
+            top: 40%;
+            left: -12%;
+            transform: rotate(90deg);
         }
     </style>
 </head>
@@ -62,9 +168,17 @@
         <!-- chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/[PATH] -->
     </a>
     <div style='text-align: center;'>
-        <a target="_blank" href="http://aburns.me"><img class='social' src="chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/images/web-icon.png" alt=""></a>
-        <a target="_blank" href="mailto:andrew.burns@uconn.edu"><img  class='social'src="chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/images/email-logo.png" alt=""></a>
-        <a href="" id='copy-link'><img class='social' src="chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/images/share-logo.png" alt=""></a>
+        <a target="_blank" href="http://aburns.me"><img class='social'
+                src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/web-icon.png" alt=""></a>
+        <a target="_blank" href="mailto:andrew.burns@uconn.edu"><img class='social'
+                src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/email-logo.png" alt=""></a>
+        <div class="con-tooltip right">
+            <a href="" id='copy-link'><img class='social'
+                    src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/share-logo.png" alt=""></a>
+            <div class="tooltip ">
+                <p style='letter-spacing: 0.5pt;'>studentadminsucks.com</p>
+            </div>
+        </div>
     </div>
 
     <div class="row">
@@ -72,20 +186,23 @@
             href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_GRADE.GBL?Page=SSR_SSENRL_GRADE&Action=A&TargetFrameName=None'>
             <div class="column" style='border-right: 1px #A3A7A3 solid;border-bottom: 1px #A3A7A3 solid;'>
                 <h2>Grades</h2>
-                <h1 style='text-align: center;'><img class='icons' src="chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/images/grades-icon.png" alt=""></h1>
+                <h1 style='text-align: center;'><img class='icons'
+                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/grades-icon.png" alt=""></h1>
             </div>
         </a>
         <a target="_blank" href='https://payplan.uconn.edu/C21646_tsa/web/caslogin.jsp'>
             <div class="column" style='border-right: 1px #A3A7A3 solid;border-bottom: 1px #A3A7A3 solid;'>
                 <h2>Pay Bill</h2>
-                <h1 style='text-align: center;'><img class='icons' src="chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/images/paybill-icon.png" alt=""></h1>
+                <h1 style='text-align: center;'><img class='icons'
+                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/paybill-icon.png" alt=""></h1>
             </div>
         </a>
         <a
             href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/PRJCS_MENU.PRJCS_SCHD_STRT.GBL?Page=PRJCS_SCHD_STRT&Action=U&TargetFrameName=None'>
             <div class="column" style='border-bottom: 1px #A3A7A3 solid;'>
                 <h2>Schedule Builder</h2>
-                <h1 style='text-align: center;'><img class='icons' src="chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/images/builder-icon.png" alt=""></h1>
+                <h1 style='text-align: center;'><img class='icons'
+                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/builder-icon.png" alt=""></h1>
             </div>
         </a>
     </div>
@@ -94,21 +211,24 @@
             href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES_2.SSR_SSENRL_CART.GBL?Page=SSR_SSENRL_CART&Action=A&ACAD_CAREER=UGRD&EMPLID=2303741&INSTITUTION=UCONN&STRM=1203&TargetFrameName=None'>
             <div class="column" style='border-right: 1px #A3A7A3 solid;border-bottom: 1px #A3A7A3 solid;'>
                 <h2>Enroll</h2>
-                <h1 style='text-align: center;'><img class='icons' src="chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/images/enroll-icon.png" alt=""></h1>
+                <h1 style='text-align: center;'><img class='icons'
+                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/enroll-icon.png" alt=""></h1>
             </div>
         </a>
         <a
             href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_SCHD_W.GBL?Page=SSR_SS_WEEK&Action=A&ACAD_CAREER=UGRD&AS_OF_DATE=2020-01-21&EMPLID=2303741&INSTITUTION=UCONN&STRM=1203&TargetFrameName=None'>
             <div class="column" style='border-right: 1px #A3A7A3 solid;border-bottom: 1px #A3A7A3 solid;'>
                 <h2>My Schedule</h2>
-                <h1 style='text-align: center;'><img class='icons' src="chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/images/schedule-icon.png" alt=""></h1>
+                <h1 style='text-align: center;'><img class='icons'
+                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/schedule-icon.png" alt=""></h1>
             </div>
         </a>
         <a
             href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.UC_SS_TERM_BILL.GBL?Page=UC_SS_TERM_BILL&Action=U&TargetFrameName=None'>
             <div class="column" style='border-bottom: 1px #A3A7A3 solid;'>
                 <h2>View Bill</h2>
-                <h1 style='text-align: center;'><img class='icons' src="chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/images/viewbill-icon.ico" alt=""></h1>
+                <h1 style='text-align: center;'><img class='icons'
+                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/viewbill-icon.ico" alt=""></h1>
             </div>
         </a>
     </div>
@@ -117,25 +237,30 @@
             href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.CLASS_SEARCH.GBL?Page=SSR_CLSRCH_ENTRY&Action=U&ExactKeys=Y&TargetFrameName=None'>
             <div class="column" style='border-right: 1px #A3A7A3 solid;border-bottom: 1px #A3A7A3 solid;'>
                 <h2>Search Classes</h2>
-                <h1 style='text-align: center;'><img class='icons' src="chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/images/search-icon.png" alt=""></h1>
+                <h1 style='text-align: center;'><img class='icons'
+                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/search-icon.png" alt=""></h1>
             </div>
         </a>
         <a
             href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_EXAM_L.GBL?Page=SSR_SSENRL_EXAM_L&Action=A&EMPLID=2303741&TargetFrameName=None'>
             <div class="column" style='border-right: 1px #A3A7A3 solid;border-bottom: 1px #A3A7A3 solid;'>
                 <h2>Finals Schedule</h2>
-                <h1 style='text-align: center;'><img class='icons' src="chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/images/exam-icon.svg" alt=""></h1>
+                <h1 style='text-align: center;'><img class='icons'
+                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/exam-icon.svg" alt=""></h1>
             </div>
         </a>
         <a
             href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SS_AA_REPORT1.GBL?Page=SS_ES_AARPT_TYPE2&Action=A&TargetFrameName=None'>
             <div class="column">
                 <h2>Transcript</h2>
-                <h1 style='text-align: center;'><img class='icons' src="chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/images/transcript-icon.png" alt=""></h1>
+                <h1 style='text-align: center;'><img class='icons'
+                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/transcript-icon.png" alt="">
+                </h1>
             </div>
         </a>
     </div>
-
+    <h4 style='text-align: center;'>Extension made with <span style="color: #e25555;">&#9829;</span> in UConn by Andrew
+        Burns and Tim Noto</h4>
 </body>
 
 </html>
