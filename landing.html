@@ -155,16 +155,95 @@
             left: -12%;
             transform: rotate(90deg);
         }
+
+        .no-show {
+            display: none;
+        }
+
+
+        /* // main level */
+        .ac {
+            /* width: 500px; */
+            margin: auto;
+            width: 60%;
+            /* border: 3px solid #73AD21; */
+            padding: 10px;
+        }
+
+        .ac-label {
+            font-weight: 700;
+            position: relative;
+            padding: .5em 1em;
+            margin-bottom: .5em;
+            display: block;
+            cursor: pointer;
+            background-color: whiteSmoke;
+            transition: background-color .15s ease-in-out;
+        }
+
+        .ac-input:checked+label,
+        .ac-label:hover {
+            background-color: #999;
+        }
+
+        .ac-label:after,
+        .ac-input:checked+.ac-label:after {
+            content: "+";
+            position: absolute;
+            display: block;
+            right: 0;
+            top: 0;
+            width: 2em;
+            height: 100%;
+            line-height: 2.25em;
+            text-align: center;
+            background-color: #e5e5e5;
+            transition: background-color .15s ease-in-out;
+        }
+
+        .ac-label:hover:after,
+        .ac-input:checked+.ac-label:after {
+            background-color: #b5b5b5;
+        }
+
+        .ac-input:checked+.ac-label:after {
+            content: "-";
+        }
+
+        .ac-input {
+            display: none;
+        }
+
+        /* // the magic */
+
+        .ac-text,
+        .ac-sub-text {
+            opacity: 0;
+            height: 0;
+            margin-bottom: .5em;
+            transition: opacity .5s ease-in-out;
+            overflow: hidden;
+        }
+
+        .ac-input:checked~.ac-text,
+        .ac-sub .ac-input:checked~.ac-sub-text {
+            opacity: 1;
+            height: auto;
+        }
     </style>
 </head>
 
 <body>
+    <!-- <div onclick="this.classList.add('hideMe')" id='notify-box' class="notify top-right"
+        data-notification-status="warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, reprehenderit
+        obcaecati itaque. Officiis libero provident perspiciatis eum fugiat laudantium sequi.</div> -->
     <h2 style='text-align:center;'>Select Your Destination</h2>
     <a
         href='https://student.studentadmin.uconn.edu/psp/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?1&FolderPath=PORTAL_ROOT_OBJECT.UC_SELF_SERVICE.UC_SS_STUDENT&IsFolder=false&IgnoreParamTempl=FolderPath%2cIsFolder'>
         <div style='text-align:center;'>
             <h1>Normal Menu</h1>
         </div>
+        <!-- <a href="#" class="button" data-type="bar-top" data-status="plain">Top bar</a> -->
         <!-- chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/[PATH] -->
     </a>
     <div style='text-align: center;'>
@@ -259,6 +338,22 @@
             </div>
         </a>
     </div>
+
+    <div class="ac">
+
+        <input class="ac-input" id="ac-1" name="ac-1" type="checkbox" />
+        <label class="ac-label" for="ac-1">SA Messages</label>
+
+        <article class="ac-text">
+
+            <p id='sa-messages'>Loading...</p>
+        </article>
+        <!--/ac-text-->
+
+    </div>
+    <!--/ac-->
+
+
     <h4 style='text-align: center;'>Extension made with <span style="color: #e25555;">&#9829;</span> in UConn by Andrew
         Burns and Tim Noto</h4>
 </body>
