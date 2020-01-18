@@ -17,7 +17,7 @@
   "content_scripts": [
     {
       "matches": ["https://student.studentadmin.uconn.edu/*"],
-      "js": ["contentscript.js"]
+      "js": ["contentScript.js"]
     }
   ],
   "browser_action": {
