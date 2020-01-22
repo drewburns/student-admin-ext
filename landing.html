@@ -4,15 +4,29 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        * {
-            box-sizing: border-box;
+        /* background: #111738 */
+        /* light background: #222e50 */
+        /* black text: #262626 */
+        /* hover color: #A6ABB9 */
+        /* topbar bg: #000b24 */
+        body {
+            background-color: #222e50;
         }
 
-        h2 {
-            color: black;
-            text-align: center;
-            font-size: 35px;
+        * {
+            margin: 0 auto;
+            box-sizing: border-box;
+            font-family: sans-serif;
         }
+
+        .link-titles {
+            /* color: black; */
+            text-align: center;
+            font-size: 30px;
+            /* margin-top: -5px; */
+            margin: 0;
+        }
+
 
         .social {
             height: 30px;
@@ -23,19 +37,34 @@
         /* Create three equal columns that floats next to each other */
         .column {
             float: left;
-            width: 33.33%;
-            padding: 10px;
-            height: 200px;
-            background-color: #CCD1CC;
-            /* border-radius: 10px;; */
-            /* border: 1px #CCD1CC solid; */
+            border-radius: 5px;
+            width: 24%;
+            /* padding: 10px; */
+            margin: 0.5%;
+            height: 140px;
+            color: #262626;
+            background-color: #ffffff;
         }
+
+        #main-header {
+            height: 50px;
+            width: 100%;
+            background-color: #000b24;
+            padding: 0;
+        }
+
+
+
+
 
         .column:hover {
-            background-color: #A3A7A3;
+            background-color: #A6ABB9;
+            /* color: white !important; */
         }
 
+
         /* Clear floats after the columns */
+
         .row:after {
             content: "";
             display: table;
@@ -53,6 +82,13 @@
         .icons {
             height: 50px;
         }
+
+        #button-holder {
+            margin: 0 auto;
+            width: 90%;
+            /* text-align: center; */
+        }
+
 
 
         .con-tooltip {
@@ -230,6 +266,39 @@
             opacity: 1;
             height: auto;
         }
+
+        #header-title {
+            color: white;
+            margin-left: 15px;
+            margin-top: 4px;
+            /* padding-top: 6px; */
+            display: inline-block;
+        }
+
+        #sign-out {
+            float: right;
+            color: white;
+            margin-right: 15px;
+            margin-top: 15px;
+            /* padding-top: 6px; */
+            display: inline-block;
+
+        }
+
+        #sa-message-holder {
+            max-height: 100px;
+            width: 60%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            background: #A6ABB9;;
+
+        }
+
+        #sa-messages {
+            font-size: 12px;
+        }
     </style>
 </head>
 
@@ -237,16 +306,14 @@
     <!-- <div onclick="this.classList.add('hideMe')" id='notify-box' class="notify top-right"
         data-notification-status="warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, reprehenderit
         obcaecati itaque. Officiis libero provident perspiciatis eum fugiat laudantium sequi.</div> -->
-    <h2 style='text-align:center;'>Select Your Destination</h2>
-    <a
+    <!-- <h2 style='text-align:center;'>Select Your Destination</h2> -->
+    <!-- <a
         href='https://student.studentadmin.uconn.edu/psp/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?1&FolderPath=PORTAL_ROOT_OBJECT.UC_SELF_SERVICE.UC_SS_STUDENT&IsFolder=false&IgnoreParamTempl=FolderPath%2cIsFolder'>
         <div style='text-align:center;'>
             <h1>Normal Menu</h1>
         </div>
-        <!-- <a href="#" class="button" data-type="bar-top" data-status="plain">Top bar</a> -->
-        <!-- chrome-extension://lnhhlcaojkgnedgoaebnacjhalkoeppi/[PATH] -->
-    </a>
-    <div style='text-align: center;'>
+    </a> -->
+    <!-- <div style='text-align: center;'>
         <a target="_blank" href="http://aburns.me"><img class='social'
                 src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/web-icon.png" alt=""></a>
         <a target="_blank" href="mailto:andrew.burns@uconn.edu"><img class='social'
@@ -258,88 +325,143 @@
                 <p style='letter-spacing: 0.5pt;'>studentadminsucks.com</p>
             </div>
         </div>
-    </div>
-
-    <div class="row">
-        <a
-            href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_GRADE.GBL?Page=SSR_SSENRL_GRADE&Action=A&TargetFrameName=None'>
-            <div class="column" style='border-right: 1px #A3A7A3 solid;border-bottom: 1px #A3A7A3 solid;'>
-                <h2>Grades</h2>
-                <h1 style='text-align: center;'><img class='icons'
-                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/grades-icon.png" alt=""></h1>
-            </div>
-        </a>
-        <a target="_blank" href='https://payplan.uconn.edu/C21646_tsa/web/caslogin.jsp'>
-            <div class="column" style='border-right: 1px #A3A7A3 solid;border-bottom: 1px #A3A7A3 solid;'>
-                <h2>Pay Bill</h2>
-                <h1 style='text-align: center;'><img class='icons'
-                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/paybill-icon.png" alt=""></h1>
-            </div>
-        </a>
-        <a
-            href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/PRJCS_MENU.PRJCS_SCHD_STRT.GBL?Page=PRJCS_SCHD_STRT&Action=U&TargetFrameName=None'>
-            <div class="column" style='border-bottom: 1px #A3A7A3 solid;'>
-                <h2>Schedule Builder</h2>
-                <h1 style='text-align: center;'><img class='icons'
-                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/builder-icon.png" alt=""></h1>
-            </div>
-        </a>
-    </div>
-    <div class="row">
-        <a
-            href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES_2.SSR_SSENRL_CART.GBL?Page=SSR_SSENRL_CART&Action=A&ACAD_CAREER=UGRD&EMPLID=2303741&INSTITUTION=UCONN&STRM=1203&TargetFrameName=None'>
-            <div class="column" style='border-right: 1px #A3A7A3 solid;border-bottom: 1px #A3A7A3 solid;'>
-                <h2>Enroll</h2>
-                <h1 style='text-align: center;'><img class='icons'
-                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/enroll-icon.png" alt=""></h1>
-            </div>
-        </a>
-        <a
-            href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_SCHD_W.GBL?Page=SSR_SS_WEEK&Action=A&ACAD_CAREER=UGRD&AS_OF_DATE=2020-01-21&EMPLID=2303741&INSTITUTION=UCONN&STRM=1203&TargetFrameName=None'>
-            <div class="column" style='border-right: 1px #A3A7A3 solid;border-bottom: 1px #A3A7A3 solid;'>
-                <h2>My Schedule</h2>
-                <h1 style='text-align: center;'><img class='icons'
-                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/schedule-icon.png" alt=""></h1>
-            </div>
-        </a>
-        <a
-            href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.UC_SS_TERM_BILL.GBL?Page=UC_SS_TERM_BILL&Action=U&TargetFrameName=None'>
-            <div class="column" style='border-bottom: 1px #A3A7A3 solid;'>
-                <h2>View Bill</h2>
-                <h1 style='text-align: center;'><img class='icons'
-                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/viewbill-icon.ico" alt=""></h1>
-            </div>
-        </a>
-    </div>
-    <div class="row">
-        <a
-            href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.CLASS_SEARCH.GBL?Page=SSR_CLSRCH_ENTRY&Action=U&ExactKeys=Y&TargetFrameName=None'>
-            <div class="column" style='border-right: 1px #A3A7A3 solid;border-bottom: 1px #A3A7A3 solid;'>
-                <h2>Search Classes</h2>
-                <h1 style='text-align: center;'><img class='icons'
-                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/search-icon.png" alt=""></h1>
-            </div>
-        </a>
-        <a
-            href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_EXAM_L.GBL?Page=SSR_SSENRL_EXAM_L&Action=A&EMPLID=2303741&TargetFrameName=None'>
-            <div class="column" style='border-right: 1px #A3A7A3 solid;border-bottom: 1px #A3A7A3 solid;'>
-                <h2>Finals Schedule</h2>
-                <h1 style='text-align: center;'><img class='icons'
-                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/exam-icon.svg" alt=""></h1>
-            </div>
-        </a>
-        <a
-            href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SS_AA_REPORT1.GBL?Page=SS_ES_AARPT_TYPE2&Action=A&TargetFrameName=None'>
-            <div class="column">
-                <h2>Transcript</h2>
-                <h1 style='text-align: center;'><img class='icons'
-                        src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/transcript-icon.png" alt="">
-                </h1>
-            </div>
+    </div> -->
+    <div id='main-header'>
+        <h1 id='header-title'>UCONN <span style='font-size:22px;'>Student Administration System </span> </h1>
+        <a href="https://student.studentadmin.uconn.edu/psp/CSPR/EMPLOYEE/HRMS/?cmd=logout">
+            <h4 id='sign-out'>Sign Out</h4>
         </a>
     </div>
 
-    <div class="ac">
+    <div id='button-holder'>
+        <div id='sa-message-holder'>
+            <p id='sa-messages'>Form 1098-T, for tax year 2019, is now available in the Finances section of your Student
+                Center. More
+                information regarding Form 1098-T can be found by clicking the following link:
+                https://bursar.uconn.edu/1098-t/
+
+
+
+                Important Announcement!
+
+
+                The 2020-2021 Financial Aid Deadline has moved to February 15. The application is now available. For
+                maximum aid consideration, file by February 15th , using your 2018 tax information.</p>
+        </div>
+        <div class="row">
+            <a
+                href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_GRADE.GBL?Page=SSR_SSENRL_GRADE&Action=A&TargetFrameName=None'>
+                <div class="column" '>
+                    <h2 class=' link-titles'>Grades</h2>
+                    <h1 style=' text-align: center;'><img class='icons'
+                            src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/grades-icon.png" alt="">
+                    </h1>
+                </div>
+            </a>
+            <a target="_blank" href='https://payplan.uconn.edu/C21646_tsa/web/caslogin.jsp'>
+                <div class="column"'>
+                    <h2 class=' link-titles'>Pay Bill</h2>
+                    <h1 style=' text-align: center;'><img class='icons'
+                            src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/paybill-icon.png" alt="">
+                    </h1>
+                </div>
+            </a>
+            <a
+                href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/PRJCS_MENU.PRJCS_SCHD_STRT.GBL?Page=PRJCS_SCHD_STRT&Action=U&TargetFrameName=None'>
+                <div class="column">
+                    <h2 class='link-titles'>Schedule Builder</h2>
+                    <h1 style='text-align: center;'><img class='icons'
+                            src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/builder-icon.png" alt="">
+                    </h1>
+                </div>
+            </a>
+            <a
+                href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/PRJCS_MENU.PRJCS_SCHD_STRT.GBL?Page=PRJCS_SCHD_STRT&Action=U&TargetFrameName=None'>
+                <div class="column">
+                    <h2 class='link-titles'>Schedule Builder</h2>
+                    <h1 style='text-align: center;'><img class='icons'
+                            src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/builder-icon.png" alt="">
+                    </h1>
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <a
+                href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES_2.SSR_SSENRL_CART.GBL?Page=SSR_SSENRL_CART&Action=A&ACAD_CAREER=UGRD&EMPLID=2303741&INSTITUTION=UCONN&STRM=1203&TargetFrameName=None'>
+                <div class="column">
+                    <h2 class='link-titles'>Enroll</h2>
+                    <h1 style='text-align: center;'><img class='icons'
+                            src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/enroll-icon.png" alt="">
+                    </h1>
+                </div>
+            </a>
+            <a
+                href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_SCHD_W.GBL?Page=SSR_SS_WEEK&Action=A&ACAD_CAREER=UGRD&AS_OF_DATE=2020-01-21&EMPLID=2303741&INSTITUTION=UCONN&STRM=1203&TargetFrameName=None'>
+                <div class="column">
+                    <h2 class='link-titles'>My Schedule</h2>
+                    <h1 style='text-align: center;'><img class='icons'
+                            src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/schedule-icon.png" alt="">
+                    </h1>
+                </div>
+            </a>
+            <a
+                href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.UC_SS_TERM_BILL.GBL?Page=UC_SS_TERM_BILL&Action=U&TargetFrameName=None'>
+                <div class="column">
+                    <h2 class='link-titles'>View Bill</h2>
+                    <h1 style='text-align: center;'><img class='icons'
+                            src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/viewbill-icon.ico" alt="">
+                    </h1>
+                </div>
+            </a>
+            <a
+                href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/PRJCS_MENU.PRJCS_SCHD_STRT.GBL?Page=PRJCS_SCHD_STRT&Action=U&TargetFrameName=None'>
+                <div class="column">
+                    <h2 class='link-titles'>Schedule Builder</h2>
+                    <h1 style='text-align: center;'><img class='icons'
+                            src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/builder-icon.png" alt="">
+                    </h1>
+                </div>
+            </a>
+        </div>
+        <div class="row">
+            <a
+                href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.CLASS_SEARCH.GBL?Page=SSR_CLSRCH_ENTRY&Action=U&ExactKeys=Y&TargetFrameName=None'>
+                <div class="column">
+                    <h2 class='link-titles'>Search Classes</h2>
+                    <h1 style='text-align: center;'><img class='icons'
+                            src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/search-icon.png" alt="">
+                    </h1>
+                </div>
+            </a>
+            <a
+                href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_EXAM_L.GBL?Page=SSR_SSENRL_EXAM_L&Action=A&EMPLID=2303741&TargetFrameName=None'>
+                <div class="column">
+                    <h2 class='link-titles'>Finals Schedule</h2>
+                    <h1 style='text-align: center;'><img class='icons'
+                            src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/exam-icon.svg" alt=""></h1>
+                </div>
+            </a>
+            <a
+                href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SS_AA_REPORT1.GBL?Page=SS_ES_AARPT_TYPE2&Action=A&TargetFrameName=None'>
+                <div class="column">
+                    <h2 class='link-titles'>Transcript</h2>
+                    <h1 style='text-align: center;'><img class='icons'
+                            src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/transcript-icon.png" alt="">
+                    </h1>
+                </div>
+            </a>
+            <a
+                href='https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/PRJCS_MENU.PRJCS_SCHD_STRT.GBL?Page=PRJCS_SCHD_STRT&Action=U&TargetFrameName=None'>
+                <div class="column">
+                    <h2 class='link-titles'>Schedule Builder</h2>
+                    <h1 style='text-align: center;'><img class='icons'
+                            src="chrome-extension://nonjinggckfcdobgcojicademlhjaohk/images/builder-icon.png" alt="">
+                    </h1>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- <div class="ac">
 
         <input class="ac-input" id="ac-1" name="ac-1" type="checkbox" />
         <label class="ac-label" for="ac-1">SA Messages</label>
@@ -348,14 +470,19 @@
 
             <p id='sa-messages'>Loading...</p>
         </article>
-        <!--/ac-text-->
 
-    </div>
-    <!--/ac-->
+    </div> -->
 
 
-    <h4 style='text-align: center;'>Extension made with <span style="color: #e25555;">&#9829;</span> in UConn by Andrew
+    <h4 style='text-align: center; color:white;'>Extension made with <span style="color: #e25555;">&#9829;</span> in
+        UConn by Andrew
         Burns and Tim Noto</h4>
 </body>
 
+
 </html>
+<!-- Dynamic -->
+<!-- https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/UC_CC_INQUIRE.UC_SR_CLS_SCH_SRCH.GBL?Page=UC_SR_CLS_SCH_SRCH&Action=C&TargetFrameName=None -->
+
+<!-- Academic Planner -->
+<!-- https://student.studentadmin.uconn.edu/psc/CSPR/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_MY_PLANNER.GBL?Page=SSS_MY_PLANNER&Action=A&ExactKeys=Y&TargetFrameName=None -->
