@@ -1,7 +1,7 @@
 {
   "name": "UConn Student Admin Helper",
   "description": "Makes student admin much easier to use",
-  "version": "2.6",
+  "version": "2.7",
   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArgD3O5al3zIHBBtKITZBch/b5DoW0wWsPm5uZqE94JEIcZ75zF7z6dVjwCUj2osSvdxBFyuiTDm+JtdXs/Gy32+cUUHC2RUkqRehUYBdnOtEyoeVLvtQXEwsPbTLYy+D2FL10jGDURaDG4RtaLpOBkbYu841Nl3GZo5W6b4cBNksHr4bMLmLc1F/+Yzlaqnr/ByLqYRFAtE4NmbYTK7H5XZubOjUC88X3/4zxtjo3VfpbBM/j+ixaQNClqd6ftQRmhAuzwkXBdADYUWu7epe2x1jDn/9HItvYII5fSaPMHced/nwtAw241QM6qkRhZEE5sN1nwOa1mSbOL6ZMcUhJQIDAQAB",
   "permissions": ["activeTab", "tabs"],
   "icons": {
